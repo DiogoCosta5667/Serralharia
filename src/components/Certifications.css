@@ -1,0 +1,171 @@
+.certifications-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.certifications-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cert-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+}
+
+.cert-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem;
+}
+
+.cert-card p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.partners-section {
+  margin-bottom: 3rem;
+}
+
+.partners-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.partner-logo {
+  font-size: 3rem;
+}
+
+.partner-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.quality-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.banner-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.banner-content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .certifications-header h2 {
+    font-size: 2rem;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .quality-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .banner-content h4 {
+    font-size: 1.25rem;
+  }
+}
