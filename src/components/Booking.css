@@ -45,7 +45,7 @@
 .info-box-icon {
   width: 32px;
   height: 32px;
-  color: var(--primary);
+  color: var(--secondary);
   flex-shrink: 0;
 }
 
