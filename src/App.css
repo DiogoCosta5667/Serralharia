@@ -1,0 +1,42 @@
+.App {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .calculator,
+body.dark-mode .contact-form {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode .footer {
+  background: #0f172a;
+  border-top-color: #334155;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
