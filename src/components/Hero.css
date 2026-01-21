@@ -41,6 +41,7 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--gray-900);
+  font-family: 'Inter', sans-serif;
 }
 
 .gradient-text {
@@ -48,7 +49,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 700;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  position: relative;
+  text-shadow: 0 2px 10px rgba(217, 119, 6, 0.3);
+  filter: brightness(1.1) contrast(1.2);
 }
 
 .hero-subtitle {
@@ -135,13 +141,16 @@
 
 .stat h3 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.5rem;
   background: var(--gradient-gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  filter: brightness(1.1) contrast(1.2);
 }
 
 .stat p {
