@@ -177,7 +177,7 @@ const Booking = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">
+            <button type="submit" className="btn btn-primary btn-block" style={{ background: submitted ? 'var(--success)' : 'var(--primary)' }}>
               {submitted ? (
                 <>
                   <CheckCircle size={20} />

@@ -128,6 +128,13 @@
   
   .booking-info {
     order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .info-box {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 250px;
   }
   
   .booking-form {
@@ -136,6 +143,10 @@
 }
 
 @media (max-width: 768px) {
+  .booking-section {
+    padding: 60px 15px;
+  }
+  
   .booking-header h2 {
     font-size: 2rem;
   }
@@ -147,5 +158,28 @@
   
   .booking-form {
     padding: 1.5rem;
+  }
+  
+  .info-box {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .booking-form {
+    padding: 1.25rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .btn-block {
+    padding: 1rem;
+    font-size: 1rem;
   }
 }

@@ -86,12 +86,21 @@
   
   .map-embed {
     height: 400px;
+    order: -1;
   }
 }
 
 @media (max-width: 768px) {
+  .map-section {
+    padding: 60px 15px;
+  }
+  
   .map-section h2 {
     font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
   }
   
   .info-cards {
@@ -100,5 +109,25 @@
   
   .info-card {
     padding: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-icon {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section h2 {
+    font-size: 1.75rem;
+  }
+  
+  .info-card {
+    padding: 1rem;
+  }
+  
+  .map-embed {
+    height: 300px;
   }
 }
