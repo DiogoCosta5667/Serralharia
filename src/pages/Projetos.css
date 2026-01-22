@@ -235,23 +235,24 @@
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #B8860B 0%, #996515 100%);
+  background: #F8F8F8;
   padding: 5rem 3rem;
   border-radius: 24px;
   text-align: center;
-  color: white;
+  color: #2C2C2C;
 }
 
 .cta-section h2 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #000000;
 }
 
 .cta-section p {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  opacity: 0.95;
+  color: #6B6B6B;
 }
 
 .cta-buttons {
@@ -276,24 +277,24 @@
 }
 
 .btn-primary {
-  background: var(--gradient-gold);
-  color: white;
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  color: #000000;
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 12px 32px rgba(184, 134, 11, 0.4);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
+  background: transparent;
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 .btn-secondary:hover {
-  background: white;
-  color: var(--primary);
+  background: #000000;
+  color: #FFFFFF;
   transform: translateY(-4px);
 }
 
