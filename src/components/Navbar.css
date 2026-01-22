@@ -23,6 +23,12 @@
   align-items: center;
 }
 
+.navbar-logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 .navbar-logo h1 {
   font-size: 1.75rem;
   font-weight: 800;

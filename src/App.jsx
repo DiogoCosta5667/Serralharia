@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Gallery from './components/Gallery'
-import Reviews from './components/Reviews'
-import Booking from './components/Booking'
-import Certifications from './components/Certifications'
-import Calculator from './components/Calculator'
-import Testimonials from './components/Testimonials'
-import About from './components/About'
-import Map from './components/Map'
-import Contact from './components/Contact'
+import Home from './pages/Home'
+import Orcamento from './pages/Orcamento'
+import Projetos from './pages/Projetos'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import LiveChat from './components/LiveChat'
@@ -29,24 +22,22 @@ function App() {
   }, [darkMode])
 
   return (
-    <div className="App">
-      <ScrollProgress />
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero />
-      <Services />
-      <Gallery />
-      <Reviews />
-      <Booking />
-      <Certifications />
-      <Calculator />
-      <Testimonials />
-      <About />
-      <Map />
-      <Contact />
-      <Footer />
-      <WhatsAppButton />
-      <LiveChat />
-    </div>
+    <Router>
+      <div className="App">
+        <ScrollProgress />
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/orcamento" element={<Orcamento />} />
+          <Route path="/projetos" element={<Projetos />} />
+        </Routes>
+
+        <Footer />
+        <WhatsAppButton />
+        <LiveChat />
+      </div>
+    </Router>
   )
 }
 

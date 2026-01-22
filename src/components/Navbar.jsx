@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 import './Navbar.css'
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,33 +16,53 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isHome = location.pathname === '/'
+
   const menuItems = [
-    { name: 'Início', href: '#home' },
-    { name: 'Serviços', href: '#services' },
-    { name: 'Galeria', href: '#gallery' },
-    { name: 'Orçamento', href: '#calculator' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Início', href: '/', type: 'route' },
+    { name: 'Serviços', href: '#services', type: 'anchor' },
+    { name: 'Projetos', href: '/projetos', type: 'route' },
+    { name: 'Orçamento', href: '/orcamento', type: 'route' },
+    { name: 'Sobre', href: '#about', type: 'anchor' },
+    { name: 'Contacto', href: '#contact', type: 'anchor' },
   ]
+
+  const handleClick = (item) => {
+    setIsOpen(false)
+    if (item.type === 'anchor' && !isHome) {
+      window.location.href = '/' + item.href
+    }
+  }
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <h1>TELES SILVA</h1>
           <p>Serralharia de Alumínio</p>
-        </div>
+        </Link>
 
         <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
           {menuItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className="navbar-link"
-            >
-              {item.name}
-            </a>
+            item.type === 'route' ? (
+              <Link
+                key={item.name}
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className="navbar-link"
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => handleClick(item)}
+                className="navbar-link"
+              >
+                {item.name}
+              </a>
+            )
           ))}
         </div>
 
