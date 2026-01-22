@@ -1,13 +1,13 @@
-import Hero from '../components/Hero'
-import Services from '../components/Services'
-import Gallery from '../components/Gallery'
-import Reviews from '../components/Reviews'
-import Certifications from '../components/Certifications'
-import Calculator from '../components/Calculator'
-import Testimonials from '../components/Testimonials'
-import About from '../components/About'
-import Map from '../components/Map'
-import Contact from '../components/Contact'
+import Hero from '../components/sections/Hero'
+import Services from '../components/sections/Services'
+import Gallery from '../components/sections/Gallery'
+import Reviews from '../components/sections/Reviews'
+import Certifications from '../components/sections/Certifications'
+import Calculator from '../components/sections/Calculator'
+import Testimonials from '../components/sections/Testimonials'
+import About from '../components/sections/About'
+import Map from '../components/sections/Map'
+import Contact from '../components/sections/Contact'
 
 function Home() {
   return (

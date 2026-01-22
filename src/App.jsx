@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
+import Navbar from './components/layout/Navbar'
 import Home from './pages/Home'
 import Orcamento from './pages/Orcamento'
 import Projetos from './pages/Projetos'
-import Footer from './components/Footer'
-import WhatsAppButton from './components/WhatsAppButton'
-import LiveChat from './components/LiveChat'
-import ScrollProgress from './components/ScrollProgress'
+import Footer from './components/layout/Footer'
+import WhatsAppButton from './components/ui/WhatsAppButton'
+import LiveChat from './components/ui/LiveChat'
+import ScrollProgress from './components/layout/ScrollProgress'
 import './App.css'
 
 function App() {
