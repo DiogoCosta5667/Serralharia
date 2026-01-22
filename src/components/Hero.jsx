@@ -6,36 +6,18 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    {
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80',
-      title: 'Janelas em Alumínio',
-      subtitle: 'Design moderno com isolamento térmico superior',
-      category: 'Janelas'
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1920&q=80',
-      title: 'Portas de Entrada Premium',
-      subtitle: 'Segurança e elegância para o seu lar',
-      category: 'Portas'
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80',
-      title: 'Envidraçamento de Varandas',
-      subtitle: 'Transforme sua varanda com vista panorâmica',
-      category: 'Varandas'
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80',
-      title: 'Guardas e Corrimãos',
-      subtitle: 'Proteção com design sofisticado',
-      category: 'Guardas'
-    }
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80',
+    'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1920&q=80',
+    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80',
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80',
+    'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1920&q=80'
   ]
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 4000)
     return () => clearInterval(timer)
   }, [])
 
@@ -50,11 +32,11 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-slider">
-        {slides.map((slide, index) => (
+        {slides.map((image, index) => (
           <div
             key={index}
             className={`slide ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ backgroundImage: `url(${image})` }}
           >
             <div className="slide-overlay"></div>
           </div>
@@ -69,23 +51,37 @@ const Hero = () => {
       </button>
 
       <div className="hero-content">
-        <div className="slide-info">
-          <span className="category-badge">{slides[currentSlide].category}</span>
-          <h1 className="hero-title">
-            {slides[currentSlide].title}
-          </h1>
-          <p className="hero-subtitle">
-            {slides[currentSlide].subtitle}
-          </p>
-        </div>
-
+        <h1 className="hero-title">
+          Excelência em <span className="highlight">Serralharia de Alumínio</span>
+        </h1>
+        <p className="hero-description">
+          Transformamos espaços com soluções inovadoras em alumínio. 
+          Qualidade, design e durabilidade em cada projeto.
+        </p>
+        
         <div className="hero-buttons">
           <a href="/projetos" className="btn btn-primary">
             Ver Projetos <ArrowRight size={20} />
           </a>
           <a href="/orcamento" className="btn btn-secondary">
+            <Phone size={20} />
             Pedir Orçamento
           </a>
+        </div>
+
+        <div className="hero-stats">
+          <div className="stat">
+            <div className="stat-number">15+</div>
+            <div className="stat-label">Anos de Experiência</div>
+          </div>
+          <div className="stat">
+            <div className="stat-number">500+</div>
+            <div className="stat-label">Projetos Concluídos</div>
+          </div>
+          <div className="stat">
+            <div className="stat-number">100%</div>
+            <div className="stat-label">Clientes Satisfeitos</div>
+          </div>
         </div>
 
         <div className="slider-indicators">
