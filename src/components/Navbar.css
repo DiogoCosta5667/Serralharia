@@ -27,25 +27,18 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-logo h1 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  background: var(--gradient-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0;
-  letter-spacing: 0.05em;
-  font-family: 'Inter', sans-serif;
+.logo-img {
+  height: 50px;
+  width: auto;
+  transition: all 0.3s ease;
 }
 
-.navbar-logo p {
-  font-size: 0.75rem;
-  color: var(--gray-600);
-  margin-top: -2px;
-  font-weight: 500;
+.navbar.scrolled .logo-img {
+  height: 45px;
 }
 
 .navbar-menu {
