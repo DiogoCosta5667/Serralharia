@@ -3,6 +3,10 @@
   background: var(--light);
 }
 
+.calculator-section .section-header h2 {
+  color: #000000;
+}
+
 .calculator {
   max-width: 800px;
   margin: 0 auto;
