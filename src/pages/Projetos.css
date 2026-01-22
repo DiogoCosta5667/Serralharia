@@ -4,10 +4,12 @@
 }
 
 .projetos-hero {
-  background: linear-gradient(135deg, #C0C0C0 0%, #B8860B 50%, #C0C0C0 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=600&fit=crop') center/cover;
   padding: 80px 20px;
   text-align: center;
   color: white;
+  position: relative;
 }
 
 .projetos-hero-content h1 {
