@@ -19,6 +19,7 @@
   --gray-200: #E8E8E8;
   --gray-300: #D0D0D0;
   --gray-600: #6B6B6B;
+  --gray-700: #4A4A4A;
   --gray-800: #2C2C2C;
   --gray-900: #1A1A1A;
   
@@ -32,6 +33,40 @@
   --shadow-md: 0 4px 16px rgba(184, 134, 11, 0.12);
   --shadow-lg: 0 8px 32px rgba(184, 134, 11, 0.15);
   --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Dark Mode - Inspirado no Logotipo SILVA */
+body.dark-mode {
+  --primary: #0047BB;           /* Azul SILVA */
+  --primary-light: #3D7EDB;
+  --primary-dark: #002E7A;
+  --secondary: #FF1744;         /* Vermelho SILVA */
+  --accent: #FF5171;
+  --success: #4ade80;
+  --white: #0D1117;
+  --off-white: #161B22;
+  --gray-50: #1A1F26;
+  --gray-100: #21262D;
+  --gray-200: #30363D;
+  --gray-300: #484F58;
+  --gray-600: #8B949E;
+  --gray-700: #C9D1D9;
+  --gray-800: #E6EDF3;
+  --gray-900: #F0F6FC;
+  
+  /* Gradientes dark mode com cores SILVA */
+  --gradient-gold: linear-gradient(135deg, #0047BB 0%, #3D7EDB 100%);
+  --gradient-gold-subtle: linear-gradient(135deg, #002E7A 0%, #0047BB 100%);
+  --gradient-light: linear-gradient(180deg, #0D1117 0%, #161B22 100%);
+  
+  /* Sombras dark mode */
+  --shadow-sm: 0 2px 8px rgba(0, 71, 187, 0.15);
+  --shadow-md: 0 4px 16px rgba(0, 71, 187, 0.25);
+  --shadow-lg: 0 8px 32px rgba(0, 71, 187, 0.35);
+  --shadow-gold: 0 4px 20px rgba(0, 71, 187, 0.4);
+  
+  background: #0D1117;
+  color: #F0F6FC;
 }
 
 body {
