@@ -38,8 +38,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <h1>TELES SILVA</h1>
-          <p>Serralharia de Alumínio</p>
+          <img src="/images/transferir.png" alt="Silva Serralharia" className="logo-img" />
         </Link>
 
         <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
