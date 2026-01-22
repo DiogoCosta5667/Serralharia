@@ -45,7 +45,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--gray-900);
+  color: #FFFFFF !important;
 }
 
 .benefit-card {
