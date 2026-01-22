@@ -12,20 +12,22 @@
 }
 
 .contact-info {
-  background: var(--gradient);
+  background: var(--gray-50);
   padding: 3rem;
   border-radius: 20px;
-  color: white;
+  color: var(--gray-900);
 }
 
 .contact-info h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--gray-900);
 }
 
 .contact-info > p {
   margin-bottom: 2rem;
   opacity: 0.9;
+  color: var(--gray-600);
 }
 
 .info-item {
@@ -38,16 +40,22 @@
 .info-item svg {
   flex-shrink: 0;
   margin-top: 0.25rem;
+  color: var(--gray-600);
+}
+
+.office-hours-icon svg {
+  color: var(--gray-600);
 }
 
 .info-item strong {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: var(--gray-800);
 }
 
 .info-item a {
-  color: white;
+  color: var(--gray-700);
   text-decoration: none;
   opacity: 0.9;
   transition: opacity 0.3s;
@@ -62,22 +70,25 @@
   margin: 0;
   opacity: 0.9;
   line-height: 1.6;
+  color: var(--gray-700);
 }
 
 .office-hours {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--gray-200);
 }
 
 .office-hours h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: var(--gray-900);
 }
 
 .office-hours p {
   margin: 0.5rem 0;
   opacity: 0.9;
+  color: var(--gray-700);
 }
 
 .contact-form {
