@@ -1,148 +1,103 @@
 import { useState, useEffect } from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Phone, ChevronLeft, ChevronRight } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [scrollY, setScrollY] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const slides = [
+    {
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80',
+      title: 'Janelas em Alumínio',
+      subtitle: 'Design moderno com isolamento térmico superior',
+      category: 'Janelas'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1920&q=80',
+      title: 'Portas de Entrada Premium',
+      subtitle: 'Segurança e elegância para o seu lar',
+      category: 'Portas'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80',
+      title: 'Envidraçamento de Varandas',
+      subtitle: 'Transforme sua varanda com vista panorâmica',
+      category: 'Varandas'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80',
+      title: 'Guardas e Corrimãos',
+      subtitle: 'Proteção com design sofisticado',
+      category: 'Guardas'
+    }
+  ]
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100
-      })
-    }
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      window.removeEventListener('scroll', handleScroll)
-    }
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
   }, [])
 
-  return (
-    <section id="home" className="hero hero-3d">
-      {/* Formas geométricas animadas */}
-      <div className="geometric-shapes">
-        <div 
-          className="shape shape-1"
-          style={{
-            transform: `translate(${mousePosition.x * 0.05}px, ${mousePosition.y * 0.05}px) translateY(${scrollY * 0.5}px)`
-          }}
-        />
-        <div 
-          className="shape shape-2"
-          style={{
-            transform: `translate(${mousePosition.x * -0.03}px, ${mousePosition.y * 0.03}px) translateY(${scrollY * 0.3}px)`
-          }}
-        />
-        <div 
-          className="shape shape-3"
-          style={{
-            transform: `translate(${mousePosition.x * 0.04}px, ${mousePosition.y * -0.04}px) translateY(${scrollY * 0.4}px)`
-          }}
-        />
-        <div 
-          className="shape shape-4"
-          style={{
-            transform: `translate(${mousePosition.x * -0.06}px, ${mousePosition.y * 0.02}px) translateY(${scrollY * 0.6}px)`
-          }}
-        />
-      </div>
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
 
-      {/* Partículas flutuantes */}
-      <div className="particles">
-        {[...Array(20)].map((_, i) => (
-          <div 
-            key={i} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`
-            }}
-          />
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
+  return (
+    <section id="home" className="hero">
+      <div className="hero-slider">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="slide-overlay"></div>
+          </div>
         ))}
       </div>
 
-      {/* Janela 3D animada */}
-      <div 
-        className="window-3d"
-        style={{
-          transform: `translateY(${scrollY * 0.2}px) rotateY(${mousePosition.x * 0.1 - 5}deg) rotateX(${mousePosition.y * -0.05 + 2.5}deg)`
-        }}
-      >
-        <div className="window-frame">
-          <div className="window-pane window-left"></div>
-          <div className="window-pane window-right"></div>
-          <div className="window-divider"></div>
-        </div>
-      </div>
+      <button className="slider-btn prev" onClick={prevSlide} aria-label="Anterior">
+        <ChevronLeft size={32} />
+      </button>
+      <button className="slider-btn next" onClick={nextSlide} aria-label="Próximo">
+        <ChevronRight size={32} />
+      </button>
 
-      {/* Conteúdo principal */}
-      <div 
-        className="hero-content-3d"
-        style={{
-          transform: `translateY(${scrollY * 0.15}px)`
-        }}
-      >
-        <div className="badge-3d">
-          <Sparkles size={16} />
-          <span>Qualidade Premium</span>
+      <div className="hero-content">
+        <div className="slide-info">
+          <span className="category-badge">{slides[currentSlide].category}</span>
+          <h1 className="hero-title">
+            {slides[currentSlide].title}
+          </h1>
+          <p className="hero-subtitle">
+            {slides[currentSlide].subtitle}
+          </p>
         </div>
-        
-        <h1 className="hero-title-3d">
-          Alumínio com
-          <span className="gradient-3d"> Design Inovador</span>
-        </h1>
-        
-        <p className="hero-subtitle-3d">
-          Transformamos ideias em realidade com tecnologia de ponta
-        </p>
 
-        <div className="hero-buttons-3d">
-          <a href="/projetos" className="btn-3d btn-primary-3d">
-            <span>Explorar Projetos</span>
-            <ArrowRight size={20} />
+        <div className="hero-buttons">
+          <a href="/projetos" className="btn btn-primary">
+            Ver Projetos <ArrowRight size={20} />
           </a>
-          <a href="/orcamento" className="btn-3d btn-secondary-3d">
-            <span>Pedir Orçamento</span>
+          <a href="/orcamento" className="btn btn-secondary">
+            Pedir Orçamento
           </a>
         </div>
 
-        {/* Estatísticas com animação */}
-        <div className="stats-3d">
-          <div className="stat-3d">
-            <div className="stat-number">15+</div>
-            <div className="stat-label">Anos</div>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-3d">
-            <div className="stat-number">500+</div>
-            <div className="stat-label">Projetos</div>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-3d">
-            <div className="stat-number">100%</div>
-            <div className="stat-label">Satisfação</div>
-          </div>
+        <div className="slider-indicators">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`indicator ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Ir para slide ${index + 1}`}
+            />
+          ))}
         </div>
-      </div>
-
-      {/* Indicador de scroll */}
-      <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <div className="arrow-down"></div>
       </div>
     </section>
   )
