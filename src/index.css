@@ -5,35 +5,33 @@
 }
 
 :root {
-  /* Cores principais do logotipo SILVA */
-  --primary: #0047BB;          /* Azul SILVA */
-  --primary-light: #3D7EDB;
-  --primary-dark: #002E7A;
-  --secondary: #FF1744;        /* Vermelho SILVA */
-  --secondary-light: #FF5171;
-  --secondary-dark: #D50032;
-  --accent: #0047BB;
+  /* Cores principais - Dourado e Branco Elegante */
+  --primary: #B8860B;           /* Dourado profissional */
+  --primary-light: #DAA520;
+  --primary-dark: #996515;
+  --secondary: #C9A959;         /* Dourado claro */
+  --accent: #D4AF37;            /* Ouro metálico */
   --success: #22c55e;
   --white: #ffffff;
-  --gray-50: #f8f9fa;
-  --gray-100: #f1f3f5;
-  --gray-200: #e9ecef;
-  --gray-300: #dee2e6;
-  --gray-600: #495057;
-  --gray-800: #212529;
-  --gray-900: #0d1117;
+  --off-white: #FAFAFA;
+  --gray-50: #F8F8F8;
+  --gray-100: #F0F0F0;
+  --gray-200: #E8E8E8;
+  --gray-300: #D0D0D0;
+  --gray-600: #6B6B6B;
+  --gray-800: #2C2C2C;
+  --gray-900: #1A1A1A;
   
-  /* Gradientes com cores SILVA */
-  --gradient-blue: linear-gradient(135deg, #0047BB 0%, #002E7A 100%);
-  --gradient-red: linear-gradient(135deg, #FF1744 0%, #D50032 100%);
-  --gradient-hero: linear-gradient(135deg, #0047BB 0%, #002E7A 50%, #001F5C 100%);
+  /* Gradientes dourados elegantes */
+  --gradient-gold: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #DAA520 100%);
+  --gradient-gold-subtle: linear-gradient(135deg, #C9A959 0%, #B8860B 100%);
+  --gradient-light: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
   
-  /* Sombras profissionais */
-  --shadow-sm: 0 2px 4px rgba(0, 71, 187, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 71, 187, 0.12);
-  --shadow-lg: 0 8px 24px rgba(0, 71, 187, 0.15);
-  --shadow-red: 0 4px 16px rgba(255, 23, 68, 0.25);
-  --shadow-blue: 0 4px 16px rgba(0, 71, 187, 0.25);
+  /* Sombras sofisticadas */
+  --shadow-sm: 0 2px 8px rgba(184, 134, 11, 0.08);
+  --shadow-md: 0 4px 16px rgba(184, 134, 11, 0.12);
+  --shadow-lg: 0 8px 32px rgba(184, 134, 11, 0.15);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
 }
 
 body {
