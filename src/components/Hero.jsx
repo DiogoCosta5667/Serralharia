@@ -52,7 +52,7 @@ const Hero = () => {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          Seja Bem-Vindo
+          Bem-Vindo
         </h1>
 
         <div className="slider-indicators">
