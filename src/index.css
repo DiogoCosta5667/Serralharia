@@ -5,11 +5,13 @@
 }
 
 :root {
-  /* Cores principais - Dourado e Branco Elegante */
-  --primary: #B8860B;           /* Dourado profissional */
+  /* Cores principais - Prata e Dourado */
+  --primary: #B8860B;           /* Dourado */
   --primary-light: #DAA520;
   --primary-dark: #996515;
-  --secondary: #C9A959;         /* Dourado claro */
+  --secondary: #C0C0C0;         /* Prata */
+  --silver: #C0C0C0;            /* Prata */
+  --silver-light: #E8E8E8;      /* Prata claro */
   --accent: #D4AF37;            /* Ouro metálico */
   --success: #22c55e;
   --white: #ffffff;
@@ -23,16 +25,17 @@
   --gray-800: #2C2C2C;
   --gray-900: #1A1A1A;
   
-  /* Gradientes dourados elegantes */
-  --gradient-gold: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #DAA520 100%);
-  --gradient-gold-subtle: linear-gradient(135deg, #C9A959 0%, #B8860B 100%);
-  --gradient-light: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+  /* Gradientes prata e dourado */
+  --gradient-silver-gold: linear-gradient(135deg, #C0C0C0 0%, #B8860B 50%, #C0C0C0 100%);
+  --gradient-gold: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+  --gradient-silver: linear-gradient(135deg, #E8E8E8 0%, #C0C0C0 100%);
+  --gradient-light: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
   
   /* Sombras sofisticadas */
-  --shadow-sm: 0 2px 8px rgba(184, 134, 11, 0.08);
-  --shadow-md: 0 4px 16px rgba(184, 134, 11, 0.12);
-  --shadow-lg: 0 8px 32px rgba(184, 134, 11, 0.15);
-  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
+  --shadow-sm: 0 2px 8px rgba(192, 192, 192, 0.15);
+  --shadow-md: 0 4px 16px rgba(192, 192, 192, 0.2);
+  --shadow-lg: 0 8px 32px rgba(192, 192, 192, 0.25);
+  --shadow-gold: 0 4px 20px rgba(184, 134, 11, 0.3);
 }
 
 /* Dark Mode - Inspirado no Logotipo SILVA */
@@ -74,8 +77,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: var(--white);
-  color: var(--gray-900);
+  background: #FFFFFF;
+  color: #2C2C2C;
   line-height: 1.7;
 }
 
