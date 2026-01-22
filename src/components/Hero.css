@@ -90,12 +90,12 @@
   font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  background: linear-gradient(135deg, #C0C0C0 0%, #B8860B 50%, #C0C0C0 100%);
+  background: linear-gradient(135deg, #C0C0C0 0%, #D4D4D4 30%, #B8860B 50%, #D4D4D4 70%, #C0C0C0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: 'Inter', sans-serif;
-  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 30px rgba(184, 134, 11, 0.3));
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 30px rgba(192, 192, 192, 0.5));
   animation: fadeIn 1.5s ease-out;
 }
 
