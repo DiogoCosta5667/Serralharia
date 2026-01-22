@@ -1,29 +1,40 @@
 .App {
   min-height: 100vh;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode */
+/* Dark Mode Premium */
 body.dark-mode {
-  background: #0f172a;
-  color: #e5e7eb;
+  background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+  color: #F5F5F5;
 }
 
 body.dark-mode .navbar {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(20, 20, 20, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(218, 165, 32, 0.1);
+  box-shadow: 0 4px 20px rgba(184, 134, 11, 0.2);
 }
 
 body.dark-mode .service-card,
 body.dark-mode .testimonial-card,
 body.dark-mode .calculator,
 body.dark-mode .contact-form {
-  background: #1e293b;
-  border-color: #334155;
+  background: linear-gradient(145deg, #1E1E1E 0%, #2A2A2A 100%);
+  border: 1px solid rgba(192, 192, 192, 0.1);
+  box-shadow: 0 8px 32px rgba(184, 134, 11, 0.15);
+}
+
+body.dark-mode .service-card:hover,
+body.dark-mode .testimonial-card:hover {
+  border-color: rgba(218, 165, 32, 0.3);
+  box-shadow: 0 12px 48px rgba(184, 134, 11, 0.3);
+  transform: translateY(-8px);
 }
 
 body.dark-mode .footer {
-  background: #0f172a;
-  border-top-color: #334155;
+  background: #0A0A0A;
+  border-top: 2px solid rgba(184, 134, 11, 0.2);
 }
 
 /* Responsivo */
