@@ -70,18 +70,12 @@
 
 .service-icon {
   width: 90px;
-  height: 90px;gray-900);
-  transition: color 0.3s ease;
-}
-
-.service-card:hover h3 {
-  color: var(--primary);
-}
-
-.service-card p {
-  color: var(--gray-600);
-  line-height: 1.8;
-  font-size: 1rem--gradient-blue);
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-blue);
   border-radius: 20px;
   color: white;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -97,12 +91,18 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--dark);
+  color: var(--gray-900);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: var(--primary);
 }
 
 .service-card p {
-  color: var(--gray);
-  line-height: 1.6;
+  color: var(--gray-600);
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
