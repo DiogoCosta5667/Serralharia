@@ -87,16 +87,6 @@ const BeforeAfter = () => {
 
             <div className="case-details">
               <p className="case-description">{currentCase.description}</p>
-              
-              <div className="case-testimonial">
-                <div className="testimonial-rating">
-                  {[...Array(currentCase.rating)].map((_, i) => (
-                    <Star key={i} size={20} fill="#B8860B" color="#B8860B" />
-                  ))}
-                </div>
-                <p className="testimonial-text">{currentCase.testimonial}</p>
-                <p className="testimonial-author">— {currentCase.client}</p>
-              </div>
             </div>
 
             <div className="case-indicators">
