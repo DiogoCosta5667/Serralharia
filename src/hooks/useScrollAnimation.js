@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export const useScrollAnimation = (options = {}) => {
+const useScrollAnimation = (options = {}) => {
   const elementRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -35,3 +35,5 @@ export const useScrollAnimation = (options = {}) => {
 
   return [elementRef, isVisible]
 }
+
+export default useScrollAnimation
