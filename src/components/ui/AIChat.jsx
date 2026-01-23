@@ -7,7 +7,7 @@ const AIChat = () => {
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: 'Olá! 👋 Bem-vindo à Serralharia Teles Silva. Como posso ajudar?'
+      text: 'Bem-vindo à Serralharia Teles Silva. Como posso ajudá-lo hoje?'
     }
   ])
   const [input, setInput] = useState('')
@@ -30,34 +30,34 @@ const AIChat = () => {
 
   const knowledgeBase = {
     'preço|orçamento|custo|valor|pedir orçamento': {
-      response: 'Para pedir um orçamento gratuito, pode:\n\n📞 Ligar: +351 000 000 000\n📧 Email: geral@telessilva.pt\n💻 Usar a calculadora no site\n\nRespondemos em 24h!',
+      response: 'Para pedir um orçamento gratuito, pode:\n\n▪ Ligar: +351 000 000 000\n▪ Email: geral@telessilva.pt\n▪ Usar a calculadora no site\n\nRespondemos em 24h!',
     },
     'garantia|anos': {
-      response: 'Oferecemos 10 anos de garantia nos materiais e 2 anos na instalação! Todos os nossos produtos são certificados. 🛡️',
+      response: 'Oferecemos 10 anos de garantia nos materiais e 2 anos na instalação. Todos os nossos produtos são certificados.',
     },
     'prazo|tempo|demora|instalação': {
-      response: 'Uma janela simples demora 2-3 horas. Projetos completos podem levar 2-3 dias. Fazemos sempre uma avaliação prévia e damos um prazo exato! ⏱️',
+      response: 'Uma janela simples demora 2-3 horas. Projetos completos podem levar 2-3 dias. Fazemos sempre uma avaliação prévia e fornecemos um prazo exato.',
     },
     'zona|local|área|onde': {
-      response: 'Atendemos todo o Grande Porto e concelhos limítrofes. Para zonas mais distantes, contacte-nos para confirmar disponibilidade! 📍',
+      response: 'Atendemos todo o Grande Porto e concelhos limítrofes. Para zonas mais distantes, contacte-nos para confirmar disponibilidade.',
     },
     'pagamento|pagar|formas': {
-      response: 'Aceitamos:\n💶 Dinheiro\n🏦 Transferência bancária\n💳 Multibanco\n📝 Cheque\n\nTambém oferecemos planos de pagamento faseado!',
+      response: 'Aceitamos:\n▪ Dinheiro\n▪ Transferência bancária\n▪ Multibanco\n▪ Cheque\n\nTambém oferecemos planos de pagamento faseado.',
     },
     'certificação|certificado|qualidade': {
-      response: 'Todos os nossos materiais têm certificação europeia (CE) e garantem os mais altos padrões de isolamento térmico/acústico, segurança e durabilidade! ✅',
+      response: 'Todos os nossos materiais têm certificação europeia (CE) e garantem os mais altos padrões de isolamento térmico/acústico, segurança e durabilidade.',
     },
     'janela|porta|varanda|guarda|serviço|ver serviços': {
-      response: 'Os nossos serviços:\n\n🪟 Janelas de alumínio\n🚪 Portas de entrada e interior\n🏢 Envidraçamento de varandas\n🛡️ Guardas e corrimãos\n🚧 Portões de entrada\n✨ Projetos personalizados',
+      response: 'Os nossos serviços:\n\n▪ Janelas de alumínio\n▪ Portas de entrada e interior\n▪ Envidraçamento de varandas\n▪ Guardas e corrimãos\n▪ Portões de entrada\n▪ Projetos personalizados',
     },
     'horário|aberto|funciona|atendimento': {
-      response: 'Horário de Atendimento:\n\n📅 Segunda a Sexta: 9h - 18h\n📅 Sábado: 9h - 13h\n⛔ Domingo: Encerrado',
+      response: 'Horário de Atendimento:\n\n▪ Segunda a Sexta: 9h - 18h\n▪ Sábado: 9h - 13h\n▪ Domingo: Encerrado',
     },
     'contacto|telefone|email|falar|telefónico': {
-      response: 'Pode contactar-nos através de:\n\n📞 Telefone: +351 000 000 000\n📧 Email: geral@telessilva.pt\n📍 Morada: Rua Exemplo, Nº 123, 0000-000 Cidade\n\nEstamos à sua disposição!',
+      response: 'Pode contactar-nos através de:\n\n▪ Telefone: +351 000 000 000\n▪ Email: geral@telessilva.pt\n▪ Morada: Rua Exemplo, Nº 123, 0000-000 Cidade\n\nEstamos à sua disposição.',
     },
     'equipa|quem|empresa': {
-      response: 'Somos uma empresa familiar com 15+ anos de experiência! Temos uma equipa de profissionais especializados em caixilharia de alumínio. 👷',
+      response: 'Somos uma empresa familiar com mais de 15 anos de experiência. Contamos com uma equipa de profissionais especializados em caixilharia de alumínio.',
     }
   }
 
@@ -71,7 +71,7 @@ const AIChat = () => {
       }
     }
     
-    return 'Desculpe, não compreendi. Pode reformular a pergunta? 🤔\n\nOu contacte-nos diretamente:\n📞 +351 000 000 000\n📧 geral@telessilva.pt'
+    return 'Desculpe, não compreendi. Pode reformular a pergunta?\n\nOu contacte-nos diretamente:\n▪ Telefone: +351 000 000 000\n▪ Email: geral@telessilva.pt'
   }
 
   const handleSend = (e) => {
