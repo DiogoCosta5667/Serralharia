@@ -10,6 +10,7 @@ import LiveChat from './components/ui/LiveChat'
 import ScrollProgress from './components/layout/ScrollProgress'
 import LoadingScreen from './components/ui/LoadingScreen'
 import BackToTop from './components/ui/BackToTop'
+import AIChat from './components/ui/AIChat'
 import './App.css'
 import './styles/animations.css'
 
@@ -41,6 +42,7 @@ function App() {
         <WhatsAppButton />
         <LiveChat />
         <BackToTop />
+        <AIChat />
       </div>
     </Router>
   )
