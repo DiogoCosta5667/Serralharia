@@ -9,7 +9,6 @@ import Calculator from '../components/sections/Calculator'
 import Testimonials from '../components/sections/Testimonials'
 import About from '../components/sections/About'
 import Team from '../components/sections/Team'
-import Partners from '../components/sections/Partners'
 import FAQ from '../components/sections/FAQ'
 import Map from '../components/sections/Map'
 import Contact from '../components/sections/Contact'
@@ -24,7 +23,6 @@ function Home() {
       <BeforeAfter />
       <Reviews />
       <Certifications />
-      <Partners />
       <Calculator />
       <Testimonials />
       <About />
