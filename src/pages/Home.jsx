@@ -1,6 +1,5 @@
 import Hero from '../components/sections/Hero'
 import Services from '../components/sections/Services'
-import Stats from '../components/sections/Stats'
 import Process from '../components/sections/Process'
 import Gallery from '../components/sections/Gallery'
 import BeforeAfter from '../components/sections/BeforeAfter'
@@ -20,7 +19,6 @@ function Home() {
     <>
       <Hero />
       <Services />
-      <Stats />
       <Process />
       <Gallery />
       <BeforeAfter />
