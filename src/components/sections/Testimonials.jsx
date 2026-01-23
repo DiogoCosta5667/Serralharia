@@ -1,7 +1,10 @@
 import { Star, Quote } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 import './Testimonials.css'
 
 const Testimonials = () => {
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [gridRef, gridVisible] = useScrollAnimation()
   const testimonials = [
     {
       name: 'João Silva',
@@ -25,14 +28,14 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="testimonials">
-      <div className="section-header">
+      <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
         <h2>O Que Dizem os Nossos Clientes</h2>
         <p>Testemunhos reais de clientes satisfeitos</p>
       </div>
 
-      <div className="testimonials-grid">
+      <div ref={gridRef} className="testimonials-grid">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-card fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+          <div key={index} className={`testimonial-card fade-in-${index % 2 === 0 ? 'left' : 'right'} delay-${index * 100} ${gridVisible ? 'visible' : ''}`}>
             <Quote className="quote-icon" size={40} />
             <div className="rating">
               {[...Array(testimonial.rating)].map((_, i) => (

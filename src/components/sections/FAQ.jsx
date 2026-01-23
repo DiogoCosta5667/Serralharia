@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import { ChevronDown, Phone } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 import './FAQ.css'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null)
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [listRef, listVisible] = useScrollAnimation()
+  const [ctaRef, ctaVisible] = useScrollAnimation()
 
   const faqs = [
     {
@@ -47,13 +51,13 @@ const FAQ = () => {
   return (
     <section id="faq" className="faq-section">
       <div className="faq-container">
-        <div className="section-header">
+        <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
           <h2>Perguntas Frequentes</h2>
           <p>Respostas às dúvidas mais comuns dos nossos clientes</p>
         </div>
 
         <div className="faq-grid">
-          <div className="faq-list">
+          <div ref={listRef} className={`faq-list fade-in-left ${listVisible ? 'visible' : ''}`}>
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
@@ -71,7 +75,7 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="faq-cta">
+          <div ref={ctaRef} className={`faq-cta fade-in-right ${ctaVisible ? 'visible' : ''}`}>
             <div className="faq-cta-card">
               <h3>Ainda tem dúvidas?</h3>
               <p>A nossa equipa está disponível para esclarecer qualquer questão.</p>

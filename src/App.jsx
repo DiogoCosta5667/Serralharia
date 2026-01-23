@@ -9,6 +9,7 @@ import WhatsAppButton from './components/ui/WhatsAppButton'
 import LiveChat from './components/ui/LiveChat'
 import ScrollProgress from './components/layout/ScrollProgress'
 import LoadingScreen from './components/ui/LoadingScreen'
+import BackToTop from './components/ui/BackToTop'
 import './App.css'
 import './styles/animations.css'
 
@@ -39,6 +40,7 @@ function App() {
         <Footer />
         <WhatsAppButton />
         <LiveChat />
+        <BackToTop />
       </div>
     </Router>
   )

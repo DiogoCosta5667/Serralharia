@@ -3,6 +3,10 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Dark Mode Premium */
 body.dark-mode {
   background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);

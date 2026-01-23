@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { Calculator as CalcIcon, Euro } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 import './Calculator.css'
 
 const Calculator = () => {
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [formRef, formVisible] = useScrollAnimation()
+  
   const [formData, setFormData] = useState({
     type: 'janela',
     width: '',
@@ -40,12 +44,12 @@ const Calculator = () => {
 
   return (
     <section id="calculator" className="calculator-section">
-      <div className="section-header">
+      <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
         <h2>Calculadora de Orçamento</h2>
         <p>Obtenha uma estimativa rápida para o seu projeto</p>
       </div>
 
-      <div className="calculator">
+      <div ref={formRef} className={`calculator scale-in ${formVisible ? 'visible' : ''}`}>
         <div className="calculator-form">
           <div className="form-group">
             <label>Tipo de Produto</label>

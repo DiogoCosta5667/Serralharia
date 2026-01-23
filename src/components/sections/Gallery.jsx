@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { X, ZoomIn } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
+import Lightbox from '../ui/Lightbox'
 import './Gallery.css'
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState(null)
   const [filter, setFilter] = useState('all')
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [gridRef, gridVisible] = useScrollAnimation()
 
   const projects = [
     { id: 1, category: 'janelas', image: 'https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=600', title: 'Janelas Residenciais' },
@@ -21,9 +26,26 @@ const Gallery = () => {
     ? projects 
     : projects.filter(project => project.category === filter)
 
+  const handleImageClick = (project) => {
+    const index = filteredProjects.findIndex(p => p.id === project.id)
+    setLightboxIndex(index)
+  }
+
+  const handlePrev = () => {
+    setLightboxIndex((prev) => 
+      prev === 0 ? filteredProjects.length - 1 : prev - 1
+    )
+  }
+
+  const handleNext = () => {
+    setLightboxIndex((prev) => 
+      prev === filteredProjects.length - 1 ? 0 : prev + 1
+    )
+  }
+
   return (
     <section id="gallery" className="gallery">
-      <div className="section-header">
+      <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
         <h2>Galeria de Projetos</h2>
         <p>Veja alguns dos nossos trabalhos realizados</p>
       </div>
@@ -61,12 +83,12 @@ const Gallery = () => {
         </button>
       </div>
 
-      <div className="gallery-grid">
-        {filteredProjects.map((project) => (
+      <div ref={gridRef} className="gallery-grid">
+        {filteredProjects.map((project, index) => (
           <div 
             key={project.id} 
-            className="gallery-item fade-in"
-            onClick={() => setSelectedImage(project)}
+            className={`gallery-item scale-in delay-${(index % 4) * 100} ${gridVisible ? 'visible' : ''}`}
+            onClick={() => handleImageClick(project)}
           >
             <img src={project.image} alt={project.title} loading="lazy" />
             <div className="gallery-overlay">
@@ -77,17 +99,13 @@ const Gallery = () => {
         ))}
       </div>
 
-      {selectedImage && (
-        <div className="lightbox" onClick={() => setSelectedImage(null)}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
-              <X size={30} />
-            </button>
-            <img src={selectedImage.image} alt={selectedImage.title} />
-            <h3>{selectedImage.title}</h3>
-          </div>
-        </div>
-      )}
+      <Lightbox
+        images={filteredProjects.map(p => p.image)}
+        currentIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
     </section>
   )
 }

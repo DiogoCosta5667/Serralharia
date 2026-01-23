@@ -1,7 +1,10 @@
 import { DoorClosed, Home, Fence, Building2, Shield, Ruler } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 import './Services.css'
 
 const Services = () => {
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [gridRef, gridVisible] = useScrollAnimation()
   const services = [
     {
       icon: <Home size={40} />,
@@ -37,13 +40,13 @@ const Services = () => {
 
   return (
     <section id="services" className="services">
-      <div className="section-header">
+      <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
         <h2>Os Nossos Serviços</h2>
         <p>Soluções completas em alumínio para qualquer necessidade</p>
       </div>
-      <div className="services-grid">
+      <div ref={gridRef} className="services-grid">
         {services.map((service, index) => (
-          <div key={index} className="service-card fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+          <div key={index} className={`service-card fade-in delay-${(index % 3 + 1) * 100} ${gridVisible ? 'visible' : ''}`}>
             <div className="service-icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>

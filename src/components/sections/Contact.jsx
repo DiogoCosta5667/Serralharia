@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 import './Contact.css'
 
 const Contact = () => {
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const [infoRef, infoVisible] = useScrollAnimation()
+  const [formRef, formVisible] = useScrollAnimation()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,13 +30,13 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <div className="section-header">
+      <div ref={headerRef} className={`section-header fade-in ${headerVisible ? 'visible' : ''}`}>
         <h2>Entre em Contacto</h2>
         <p>Estamos prontos para realizar o seu projeto</p>
       </div>
 
       <div className="contact-content">
-        <div className="contact-info">
+        <div ref={infoRef} className={`contact-info fade-in-left ${infoVisible ? 'visible' : ''}`}>
           <h3>Informações de Contacto</h3>
           <p>Fale connosco através de qualquer um dos seguintes meios:</p>
 
@@ -73,7 +78,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={formRef} className={`contact-form fade-in-right ${formVisible ? 'visible' : ''}`} onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
