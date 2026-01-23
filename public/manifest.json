@@ -1,0 +1,38 @@
+{
+  "name": "Serralharia Teles Silva",
+  "short_name": "Teles Silva",
+  "description": "Especialistas em caixilharia de alumínio - Janelas, Portas, Varandas e Guardas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#B8860B",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/transferir.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/transferir.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "construction"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Pedir Orçamento",
+      "url": "/orcamento",
+      "description": "Solicitar orçamento gratuito"
+    },
+    {
+      "name": "Ver Projetos",
+      "url": "/projetos",
+      "description": "Galeria de projetos realizados"
+    }
+  ]
+}

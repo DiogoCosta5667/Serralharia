@@ -8,7 +8,9 @@ import Footer from './components/layout/Footer'
 import WhatsAppButton from './components/ui/WhatsAppButton'
 import LiveChat from './components/ui/LiveChat'
 import ScrollProgress from './components/layout/ScrollProgress'
+import LoadingScreen from './components/ui/LoadingScreen'
 import './App.css'
+import './styles/animations.css'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -24,6 +26,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <LoadingScreen />
         <ScrollProgress />
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         

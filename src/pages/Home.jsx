@@ -6,6 +6,7 @@ import Certifications from '../components/sections/Certifications'
 import Calculator from '../components/sections/Calculator'
 import Testimonials from '../components/sections/Testimonials'
 import About from '../components/sections/About'
+import FAQ from '../components/sections/FAQ'
 import Map from '../components/sections/Map'
 import Contact from '../components/sections/Contact'
 
@@ -20,6 +21,7 @@ function Home() {
       <Calculator />
       <Testimonials />
       <About />
+      <FAQ />
       <Map />
       <Contact />
     </>
