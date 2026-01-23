@@ -95,23 +95,24 @@
 }
 
 .faq-cta-card {
-  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  background: #F8F8F8;
   padding: 2.5rem;
   border-radius: 20px;
   text-align: center;
-  color: white;
-  box-shadow: 0 10px 40px rgba(184, 134, 11, 0.3);
+  color: #2C2C2C;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .faq-cta-card h3 {
   font-size: 1.75rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #000000;
 }
 
 .faq-cta-card p {
   margin-bottom: 2rem;
-  opacity: 0.95;
+  color: #6B6B6B;
   line-height: 1.6;
 }
 
@@ -121,8 +122,8 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: white;
-  color: #B8860B;
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  color: #000000;
   border: none;
   border-radius: 12px;
   font-weight: 700;
@@ -135,18 +136,18 @@
 
 .faq-cta-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3);
 }
 
 .faq-cta-btn.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 .faq-cta-btn.secondary:hover {
-  background: white;
-  color: #B8860B;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 @media (max-width: 968px) {
