@@ -6,11 +6,10 @@ import Orcamento from './pages/Orcamento'
 import Projetos from './pages/Projetos'
 import Footer from './components/layout/Footer'
 import WhatsAppButton from './components/ui/WhatsAppButton'
-import LiveChat from './components/ui/LiveChat'
+import AIChat from './components/ui/AIChat'
 import ScrollProgress from './components/layout/ScrollProgress'
 import LoadingScreen from './components/ui/LoadingScreen'
 import BackToTop from './components/ui/BackToTop'
-import AIChat from './components/ui/AIChat'
 import './App.css'
 import './styles/animations.css'
 
@@ -40,9 +39,8 @@ function App() {
 
         <Footer />
         <WhatsAppButton />
-        <LiveChat />
-        <BackToTop />
         <AIChat />
+        <BackToTop />
       </div>
     </Router>
   )
