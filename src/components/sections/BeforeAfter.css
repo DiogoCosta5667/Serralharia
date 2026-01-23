@@ -1,0 +1,250 @@
+.before-after-section {
+  padding: 100px 20px;
+  background: #FFFFFF;
+}
+
+.before-after-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.case-showcase {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.case-content {
+  flex: 1;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+  border-radius: 30px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.case-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.case-location {
+  font-size: 1.1rem;
+  color: #B8860B;
+  font-weight: 600;
+}
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.comparison-side {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.comparison-side:hover {
+  transform: scale(1.05);
+}
+
+.comparison-side img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.comparison-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.comparison-label.before {
+  background: rgba(107, 107, 107, 0.9);
+  color: white;
+}
+
+.comparison-label.after {
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  color: white;
+}
+
+.comparison-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 4px 20px rgba(184, 134, 11, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.case-details {
+  margin-top: 2rem;
+}
+
+.case-description {
+  font-size: 1.1rem;
+  color: #6B6B6B;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.case-testimonial {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  border-left: 4px solid #B8860B;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #2C2C2C;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  text-align: center;
+  font-weight: 600;
+  color: #B8860B;
+}
+
+.case-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #B8860B;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  width: 40px;
+  border-radius: 10px;
+}
+
+.indicator:hover:not(.active) {
+  background: rgba(184, 134, 11, 0.3);
+}
+
+.nav-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(184, 134, 11, 0.3);
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(184, 134, 11, 0.5);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+  .comparison-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparison-divider {
+    transform: rotate(90deg);
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .case-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-side img {
+    height: 250px;
+  }
+
+  .case-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .case-content {
+    padding: 1.5rem;
+  }
+}

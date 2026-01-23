@@ -1,0 +1,105 @@
+.partners-section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.partner-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  height: 120px;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(184, 134, 11, 0.2);
+  border-color: #B8860B;
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.partners-badges {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(218, 165, 32, 0.1) 100%);
+  border-radius: 20px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+.badge-icon {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .partner-card {
+    height: 100px;
+    padding: 1.5rem;
+  }
+
+  .partner-card img {
+    max-height: 50px;
+  }
+
+  .partners-badges {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
